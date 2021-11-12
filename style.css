@@ -1,0 +1,71 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quote-box{
+  width: 70%;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "quote quote" "author author" "tweet new";
+  padding: 20px;
+  transition: height 0.2s linear;
+  row-gap: 10px;
+  border-radius: 5px
+}
+
+#text{
+  opacity: 0;
+  grid-area: quote;
+  font-size: 40px
+}
+
+#author{
+  opacity: 0;
+  grid-area: author;
+  font-size: 25px;
+  text-align: right;
+  font-style: italic;
+}
+
+.new{
+  grid-area: new;
+  display: flex;
+  justify-content: flex-end
+}
+
+#new-quote{
+  width: initial;
+  display: inline-block;
+}
+
+.twitter-box{
+  grid-area: tweet
+}
+
+#tweet-quote{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn{
+  padding: 8px 15px;
+  color: inherit;
+  background-color: orange;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid orange;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in
+}
+
+.btn:hover{
+  background-color: transparent;
+  color: orange;
+}
